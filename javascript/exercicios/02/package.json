@@ -1,0 +1,10 @@
+{
+    "name": "exercicios-01",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "Instruções dos exericicios no arquivo instrucoes.pdf",
+    "author": "Cauê Souza",
+    "dependencies": {
+        "inquirer": "^9.2.16"
+    }
+}
