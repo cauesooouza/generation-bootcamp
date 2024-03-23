@@ -10,14 +10,13 @@ let idades = 0,
     boleano = true
 
 while (boleano) {
-
     let inputIdade = readline.questionInt("Idade: ");
 
-    console.log(`\n1- Mulher Cis \n2 - Homem Cis \n3 - Não Binário \n4 - Mulher Trans \n5 - Homen Trans \n6 - Outros\n`)
+    console.log(`\n1 - Mulher Cis \n2 - Homem Cis \n3 - Não Binário \n4 - Mulher Trans \n5 - Homen Trans \n6 - Outros\n`)
 
     let inputGenero = readline.keyIn("Identidade de Genero(1-6): ", { limit: '$<1-6>' });
 
-    console.log(`\n1- Backend\n2 - frontEnd \n3 - Mobile \n4 - FullStack \n`)
+    console.log(`\n1 - Backend\n2 - frontEnd \n3 - Mobile \n4 - FullStack \n`)
 
     let inputCategoria = readline.keyIn("Selecione a categoria que esta pessoa se encaixa (1-4): ");
 
@@ -50,7 +49,6 @@ while (boleano) {
     totalPessoas++
 
     if (inputContinua === 'N') {
-
         boleano = false;
 
         if (totalPessoas == 1) {
