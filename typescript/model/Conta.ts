@@ -15,38 +15,38 @@ export class Conta {
         this._saldo = saldo;
     }
 
-    public get get_numero(): UUID {
+    public get numero(): UUID {
         return this._numero;
     }
-    public set set_numero(value: UUID) {
+    public set numero(value: UUID) {
         this._numero = value;
     }
 
-    public get get_agencia(): number {
+    public get agencia(): number {
         return this._agencia;
     }
-    public set set_agencia(value: number) {
+    public set agencia(value: number) {
         this._agencia = value;
     }
 
-    public get get_tipo(): string {
+    public get tipo(): string {
         return this._tipo;
     }
-    public set set_tipo(value: string) {
+    public set tipo(value: string) {
         this._tipo = value;
     }
 
-    public get get_titular(): string {
+    public get titular(): string {
         return this._titular;
     }
-    public set set_titular(value: string) {
+    public set titular(value: string) {
         this._titular = value;
     }
 
-    public get get_saldo(): number {
+    public get saldo(): number {
         return this._saldo;
     }
-    public set set_saldo(value: number) {
+    public set saldo(value: number) {
         this._saldo = value;
     }
 

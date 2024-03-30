@@ -1,5 +1,5 @@
 import readline = require('readline-sync');
-import { Conta, } from './model/Conta';
+import { Conta } from '../model/Conta';
 
 const Menu = () => {
 
