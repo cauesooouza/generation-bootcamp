@@ -1,24 +1,24 @@
 import { UUID } from "crypto";
 
-export class Conta {
-    private _numero: UUID;
+export abstract class Conta {
+    private _numero: number;
     private _agencia: number;
     private _tipo: string;
     private _titular: string;
     private _saldo: number;
 
-    constructor(agencia: number, tipo: string, titular: string, saldo: number) {
-        this._numero = crypto.randomUUID();
+    constructor(numero: number, agencia: number, tipo: string, titular: string, saldo: number) {
+        this._numero = numero;
         this._agencia = agencia;
         this._tipo = tipo;
         this._titular = titular;
         this._saldo = saldo;
     }
 
-    public get numero(): UUID {
+    public get numero(): number {
         return this._numero;
     }
-    public set numero(value: UUID) {
+    public set numero(value: number) {
         this._numero = value;
     }
 
@@ -68,14 +68,14 @@ export class Conta {
     }
 
     public visualizar(): void {
-        console.log(`********************************************************
+        console.log(`
+********************************************************
         Dados da conta
 ********************************************************
 Titular: ${this._titular}
 Numero da conta: ${this._numero}
 Agencia: ${this._agencia}
 Tipo: ${this._tipo}
-Saldo: ${this.converterParaMoeda(this._saldo)}
-`)
+Saldo: ${this.converterParaMoeda(this._saldo)}`)
     }
 }

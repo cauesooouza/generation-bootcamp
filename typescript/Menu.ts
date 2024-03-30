@@ -1,9 +1,14 @@
 import readline = require('readline-sync');
-import { Conta } from '../model/Conta';
+import { colors } from './src/util/Colors';
+import { ContaCorrente } from './src/model/ContaCorrente';
+import { ContaPoupanca } from './src/model/ContaPoupanca';
+import { ContaConrtoller } from './src/controller/ContaController';
 
 const Menu = () => {
+    let contas: ContaConrtoller = new ContaConrtoller();
 
-    console.log(`********************************************************
+    console.log(`${colors.bg.black, colors.fg.yellow} 
+********************************************************
                 Banco dos cria
 ********************************************************
 
@@ -16,6 +21,7 @@ const Menu = () => {
             7 - Depositar
             8 - Transferir valores entre contas
             9 - Sair
+${colors.reset}
 `)
 
     let opcao: number = readline.questionInt("Digite a opcao desejada: ");
@@ -27,16 +33,25 @@ const Menu = () => {
             let tipoDeConta = readline.keyIn("Qual tipo de conta? ", { limit: '$<1-2>' });
             let agencia = readline.questionInt("Digite o numero da agencia: ");
             let saldoInicial = readline.questionFloat("Deseja depositar saldo inicial? ");
-            let novaConta: Conta = new Conta(agencia, tipoDeConta, nome, saldoInicial);
+            if (tipoDeConta === '1') {
+                let limite = saldoInicial * 2.5;
+                contas.cadastrar(
+                    new ContaCorrente(contas.gerarNumeroDaConta(), agencia, tipoDeConta, nome, saldoInicial, limite)
+                )
+            } else {
+                let aniversario = readline.questionInt("Digite o dia do seu aniversário: ")
+                let novaConta: ContaPoupanca = new ContaPoupanca(contas.gerarNumeroDaConta(), agencia, tipoDeConta, nome, saldoInicial, aniversario);
+                novaConta.visualizar();
+            }
 
-            console.log('Conta criada com sucesso');
-            novaConta.visualizar();
+
             Menu();
         case 2:
-
+            contas.listarTodas();
             Menu();
         case 3:
-
+            let numeroDConta: number = readline.questionInt("Qual numero da conta que deseja procurar? ")
+            contas.procurarPorNumero(numeroDConta)
             Menu();
         case 4:
 
