@@ -1,4 +1,4 @@
-import { UUID } from "crypto";
+import { colors } from "../util/Colors";
 
 export abstract class Conta {
     private _numero: number;
@@ -10,7 +10,11 @@ export abstract class Conta {
     constructor(numero: number, agencia: number, tipo: string, titular: string, saldo: number) {
         this._numero = numero;
         this._agencia = agencia;
-        this._tipo = tipo;
+        if (tipo === '1') {
+            this._tipo = 'Corrente'
+        } else {
+            this._tipo = 'Poupança'
+        }
         this._titular = titular;
         this._saldo = saldo;
     }
@@ -18,6 +22,7 @@ export abstract class Conta {
     public get numero(): number {
         return this._numero;
     }
+    
     public set numero(value: number) {
         this._numero = value;
     }
@@ -68,14 +73,14 @@ export abstract class Conta {
     }
 
     public visualizar(): void {
-        console.log(`
+        console.log(`${colors.bg.black, colors.fg.blue}
 ********************************************************
         Dados da conta
 ********************************************************
 Titular: ${this._titular}
 Numero da conta: ${this._numero}
 Agencia: ${this._agencia}
-Tipo: ${this._tipo}
-Saldo: ${this.converterParaMoeda(this._saldo)}`)
+Conta: ${this._tipo}
+Saldo: ${this.converterParaMoeda(this._saldo)} ${colors.reset}`)
     }
 }

@@ -1,3 +1,4 @@
+import { colors } from './../util/Colors';
 import { Conta } from "./Conta";
 
 export class ContaCorrente extends Conta {
@@ -32,6 +33,6 @@ export class ContaCorrente extends Conta {
 
     public visualizar(): void {
         super.visualizar();
-        console.log(`Limite: ${this.converterParaMoeda(this._limite)} `)
+        console.log(`${colors.bg.black, colors.fg.blue}Limite: ${this.converterParaMoeda(this._limite)} ${colors.reset}`)
     }
 }
