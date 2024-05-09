@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Universo
+    </title>
+    <link rel="shortcut icon" href="./assets/page-01/astronauta.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/page-01/style/page_01_style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span>
+                Mr z Universe
+            </span>
+            <ul>
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#sobre">
+                        Sobre
+                    </a>
+                </li>
+                <li>
+                    <a href="#contato">
+                        Contate me
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <div class="texto-home">
+                <span>Bem vindo a um Novo Universo</span>
+                <h1>Diferentes mundos para diferentes pessoas</h1>
+                <p>
+                    No vasto universo, estrelas cintilantes tecem histórias cósmicas, enquanto planetas dançam em
+                    órbitas misteriosas. Galáxias se estendem como pinturas celestiais, revelando segredos e maravilhas
+                    além da imaginação.
+                </p>
+
+                <a id="explore" href="#sobre">Explore</a>
+            </div>
+            <img src="./assets/page-01/astronauta.svg" alt="imagem de um capacete de astronauta e planetas em volta"
+                class="astronauta">
+        </section>
+        <section class="sobre" id="sobre">
+            <img alt="foto de Cauê Souza" class="foto-perfil" id="foto-perfil">
+            <div>
+                <h2>Quem Sou eu?</h2>
+                <p>
+                    Entusiasta por tecnologia, curioso, dedicado e inteligente. <br />
+                    ou não, siga-me os bons.
+                </p>
+                <div class="github-infos">
+                    <a id="github" target="_blank">Github</a>
+                    <span id="seguidores"></span>
+                    <span id="repositorios"></span>
+                </div>
+            </div>
+        </section>
+        <section id="contato">
+            <div>
+                <h3>Me contate</h3>
+                <p>Precisa de um website, uma aplicação ou ajuda com desenvolvimento de software e afins? conecte-se
+                    comigo atraves do meu linkedin ou whatsapp.</p>
+                <div>
+                    <a href="https://www.linkedin.com/in/cauesooouza/" class="linkedin">
+                        <img src="./assets/page-01/linkedin.svg" alt="linkedin icone">
+                        <span class="sr-only">
+                            linkedin
+                        </span>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=5513981509766&text=Ol%C3%A1%20cau%C3%AA%2C%20gostaria%20de%20me%20conectar%20com%20voce."
+                        class="whatsapp">
+                        <img src="./assets/page-01/whatsapp.svg" alt="whatsapp icoone">
+                        <span class="sr-only">
+                            whatsapp
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <form>
+                    <div>
+                        <label for="nome">Nome:</label>
+                        <input type="text" required id="nome">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div>
+                        <label for="assunto">Assunto:</label>
+                        <input type="text" id="assunto" required>
+                    </div>
+                    <div>
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea name="mensagem" id="mensagem" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit"> Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Feito com ♥ por Cauê Souza - 2024
+    </footer>
+</body>
+<script src="./assets/page-01/js/index.js"></script>
+
+</html>
