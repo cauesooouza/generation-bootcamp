@@ -26,10 +26,11 @@ header {
     position: sticky;
     top: 0;
 
-    >nav {
+    nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         width: 100%;
         max-width: 1280px;
         margin: 0 auto;
@@ -69,17 +70,27 @@ main {
     >section {
         margin: 0 auto;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: center;
         width: 100%;
         max-width: 1280px;
         height: 100svh;
         gap: 1rem;
+        align-content: center;
 
         >div {
             display: flex;
             flex-direction: column;
             width: 45%;
+            min-width: 300px;
+
+            @media (max-width:768px) {
+                min-width: none;
+                width: 50%;
+                justify-content: space-around;
+                align-items: stretch;
+            }
         }
 
         >div.texto-home {
@@ -122,16 +133,12 @@ main {
         }
 
         &#sobre {
-            >img.foto-perfil {
-                border-radius: 50%;
-                border: 5px solid var(--roxo-claro);
-                width: 45%;
-            }
 
             >div {
                 align-items: center;
                 text-align: center;
                 gap: 1rem;
+                justify-content: center;
 
                 >h2 {
                     font-weight: 700;
@@ -142,6 +149,12 @@ main {
                     font-size: .875rem;
                     font-weight: 300;
                     margin-bottom: 1rem;
+                }
+
+                >img.foto-perfil {
+                    border-radius: 50%;
+                    border: 5px solid var(--roxo-claro);
+                    width: 80%;
                 }
 
                 >div.github-infos {
@@ -178,6 +191,7 @@ main {
                 gap: 1rem;
                 text-align: center;
                 width: 40%;
+
                 >h3 {
                     font-weight: 700;
                     font-size: 2rem;
@@ -233,19 +247,22 @@ main {
                             font-weight: 500;
                         }
 
-                        >input,textarea,button {
+                        >input,
+                        textarea,
+                        button {
                             outline: none;
                             border: none;
                             resize: none;
                             border-radius: .75rem;
                         }
-                        
-                        >input,textarea {
-                            padding: .5rem 1rem ;
+
+                        >input,
+                        textarea {
+                            padding: .5rem 1rem;
                             font-size: 1rem;
                             font-weight: 300;
                         }
-        
+
                         >textarea {
                             height: 80px;
                         }
@@ -264,7 +281,8 @@ main {
         }
     }
 }
-footer{
+
+footer {
     text-align: center;
     padding: 3rem 8rem;
     background: var(--roxo-escuro);
