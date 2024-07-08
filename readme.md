@@ -50,3 +50,11 @@ Jornada imersiva de 90 dias, desenvolvendo soft skills e hard skills que um dese
 6. Desenvolvimento backend (Typescript e Nest)
 7. Desenvolvimento frontend (HTML e CSS)
 8. Desenvolvimento frontend (React)
+
+## PROJETOS DESENVOLVIDOS DURANTE O BOOTCAMP
+- [Performance goals 1](https://github.com/cauesooouza/first-perfomance-goals-generation)
+- [Perfomance goals 2](https://github.com/cauesooouza/second-perfomance-goals-generation)
+- [Perfomance goals 3](https://github.com/cauesooouza/third-perfomance-goals-generation)
+- [Blog pessoal frontend](https://github.com/cauesooouza/blog-pessoal-front)
+- [Blog pessoal backend](https://github.com/cauesooouza/backend-blog)
+- [Hardware shop backend](https://github.com/cauesooouza/hardware-shop-backend)
